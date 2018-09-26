@@ -7,7 +7,9 @@ package selenium;
 
 import java.net.InetAddress;
 import java.util.GregorianCalendar;
+import java.util.*;
 
+import javax.swing.JProgressBar;
 /**
  *
  * @author User
@@ -15,7 +17,7 @@ import java.util.GregorianCalendar;
 public  class App{
 
     
-    public static  void sendPingRequest2(String ipAddress, javax.swing.JTextPane jTextPane1,javax.swing.JTextPane jTextPane2) {
+    public static  void sendPingRequest2(String ipAddress, javax.swing.JTextPane jTextPane1,javax.swing.JTextPane jTextPane2,javax.swing.JTextField jTextField1) {
 
         try {
             for (int i=0; i<10; i++){
@@ -24,6 +26,8 @@ public  class App{
             long start = new GregorianCalendar().getTimeInMillis();
             System.out.println("Sending Ping Request to " + ipAddress);
             long sum =0;
+           
+          List<Long> list = new ArrayList<>();
               
           
             
@@ -31,9 +35,14 @@ public  class App{
 
                 finish = new GregorianCalendar().getTimeInMillis();
                 long value= finish-start;
+                
+                list.add(value);
+                long lowest = Collections.min(list);
+                  System.out.println("value" + lowest);
                sum = value+value/10;
                 jTextPane1.setText("Ping RTT: " + (value + "ms"));
                jTextPane2.setText("average ping: " + sum + "ms");
+               jTextField1.setText("" + lowest + "ms");
             } else {
                 System.out.println(ipAddress + " NOT reachable.");
             }
@@ -46,7 +55,8 @@ public  class App{
     public static void main(String[] args) {
         App m = new App();
         NewJFrame jf = new NewJFrame();
-        m.sendPingRequest2("104.160.142.3", jf.jTextPane1, jf.jTextPane2);
+        
+       
 
     }
 
