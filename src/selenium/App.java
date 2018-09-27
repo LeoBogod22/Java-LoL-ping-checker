@@ -70,7 +70,7 @@ public  class App{
                else{
                    
                      jTextPane1.setText("Ping RTT: " + value + "ms");
-                jTextPane2.setText("average ping: " + sum + "ms");
+                jTextPane2.setText(" " + sum + "ms");
                jTextField1.setText("" + lowest + "ms");
                     jTextPane1.setBackground(Color.red);
                      jTextPane2.setBackground(Color.red);
