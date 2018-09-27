@@ -3,7 +3,7 @@
 # LoL-Ping-Checker
 
 Simple League of Legends multithreaded  ping checker that uses InetAddress to accurately determine ping.
-Client pings the server 10 times to get an average ping and determine the average and minimum ranges.
+Client pings the server 10 times to get an average ping and determine the max and minimum ranges.
 
 
 
