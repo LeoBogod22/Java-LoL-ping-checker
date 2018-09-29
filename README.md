@@ -31,4 +31,4 @@ Download   https://github.com/LeoBogod22/Java-LoL-ping-checker/blob/master/selen
 
 
 
-[!alt text](42858973_1055767081251472_1695515851370790912_n.jpg)
+![alt text](42858973_1055767081251472_1695515851370790912_n.jpg)
