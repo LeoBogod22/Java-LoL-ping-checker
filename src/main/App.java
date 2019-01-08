@@ -39,38 +39,20 @@ public  class App{
                 long lowest = Collections.min(list);
                   System.out.println("value" + lowest);
                sum = value+value/10;
-               if(value <250){
-                   
-                jTextPane1.setText("Ping RTT: " + value + "ms");
-                jTextPane2.setText("average ping: " + sum + "ms");
-               jTextField1.setText("" + lowest + "ms");
-                    jTextPane1.setBackground(Color.green);
-                     jTextPane2.setForeground(Color.green);
-                       jTextField1.setBackground(Color.green);
-               }
-               
-               
-               else if(value>250 || value <500){
-                   
-                   jTextPane1.setText("Ping RTT: " + value + "ms");
-                jTextPane2.setText("average ping: " + sum + "ms");
-               jTextField1.setText("" + lowest + "ms");
-                    jTextPane1.setBackground(Color.yellow);
-                     jTextPane2.setBackground(Color.yellow);
-                       jTextField1.setBackground(Color.yellow);
-                   
-               }
-               
-               
-               else{
-                   
-                     jTextPane1.setText("Ping RTT: " + value + "ms");
-                jTextPane2.setText(" " + sum + "ms");
-               jTextField1.setText("" + lowest + "ms");
-                    jTextPane1.setBackground(Color.red);
-                     jTextPane2.setBackground(Color.red);
-                       jTextField1.setBackground(Color.red);
-               }
+                 if (value < 250) {
+                color = Color.green;
+            } else if (value < 500) {
+                color = Color.yellow;
+            } else {
+                color = Color.red;
+            }
+
+            jTextPane1.setText("Ping RTT: " + value + "ms");
+            jTextPane2.setText("average ping: " + sum + "ms");
+            jTextField1.setText("" + lowest + "ms");
+            jTextPane1.setBackground(color);
+            jTextPane2.setForeground(color);
+            jTextField1.setBackground(color);
               
             } else {
                 System.out.println(ipAddress + " NOT reachable.");
